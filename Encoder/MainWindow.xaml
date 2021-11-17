@@ -1,0 +1,25 @@
+﻿<Window x:Class="Encoder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Encoder"
+        mc:Ignorable="d"
+        Title="Encrypt" Height="536" Width="336" Icon="Pictures/Icon.jpg">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Pictures/background.gif"/>
+        </Grid.Background>
+        <TextBox x:Name="forEncrypt" ToolTip="Для начала введите текст и нажмите кнопку &quot;Шифровать&quot;." HorizontalAlignment="Left" Height="160" Margin="10,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="308" TextChanged="forEncrypt_TextChanged"/>
+        <TextBox x:Name="forDecrypt"  ToolTip="Для расшифровки нажмите кнопку $quot;Расшифровать$quot; " HorizontalAlignment="Left" Height="160" Margin="10,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" TextChanged="forDecrypt_TextChanged"/>
+        <TextBox x:Name="forKey" ToolTip="Введите количество символов сдвига" HorizontalAlignment="Left" Height="52" Margin="225,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.45,-0.565" TextChanged="forKey_TextChanged" PreviewTextInput="forKey_PreviewTextInput"/>
+        <Button x:Name="encrypt" Content="Шифровать" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click"/>
+        <Button x:Name="loadInEncrypt" Content="Загрузить" HorizontalAlignment="Left" Margin="143,72,0,0" VerticalAlignment="Top" Width="85" Click="loadInEncrypt_Click"/>
+        <Button x:Name="SaveFromEncrypt" Content="Сохранить" HorizontalAlignment="Left" Margin="233,72,0,0" VerticalAlignment="Top" Width="85" Click="SaveFromEncrypt_Click"/>
+        <Button x:Name="decrypt" Content="Расшифровать" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="85" Click="decrypt_Click"/>
+        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="143,266,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click_2"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="233,266,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click_1"/>
+        <Button x:Name="exit" Content="Выход" HorizontalAlignment="Left" Margin="233,456,0,0" VerticalAlignment="Top" Width="85" Click="exit_Click"/>
+        <Button x:Name="clear" Content="Очистить все" HorizontalAlignment="Left" Margin="143,456,0,0" VerticalAlignment="Top" Width="85" Click="clear_Click"/>
+    </Grid>
+</Window>
